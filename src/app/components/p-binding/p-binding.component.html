@@ -1,0 +1,12 @@
+<h1>Property Binding</h1>
+
+<!-- <input type="text" value="ravi varma"> -->
+
+
+<input type="text" value=name id=name>
+<input type="text" value={{name}} id={{name}}>
+<input type="text" [value]="name" [id]="name"> <hr>
+
+<input type="text" [value] = "name" [id] = "name" disabled>
+<input type="text" [value] = "name" [id] = "name" disabled={{isDisabled}}>
+<input type="text" [value] = "name" [id] = "name" [disabled]="isDisabled">

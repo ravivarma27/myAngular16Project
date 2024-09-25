@@ -1,0 +1,24 @@
+<p class="textColor">c-binding works!</p>
+<p class="textSize">c-binding works!</p>
+
+
+<p [class]="myText">class binding works!</p>
+
+
+<p class="textColor textSize">Multiple class binding works!</p>
+
+<p [class]="myClassGroup">Multiple class group binding works!</p>
+
+
+<h1 [ngClass]="myClassGroup">Multiple class group binding with ngClass works!</h1>
+
+<p [class]="isRequired ? 'textColor' : 'textSize'">class binding with terinary operator</p>
+
+<p [class.textSize] = "isRequired">class binding with . operator</p>
+
+
+
+
+
+
+

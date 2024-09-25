@@ -1,0 +1,17 @@
+<h3><u>if Derective</u></h3>
+
+<h1 *ngIf="check" style="color: red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis commodi nostrum exercitationem distinctio sit culpa, dolor accusamus ea. Expedita molestias sint repellendus explicabo ullam laboriosam incidunt odio corrupti autem quo.</h1>
+
+<h1 *ngIf="check; then tBlock else eBlock" style="color: blue;"></h1>
+
+<ng-template #eBlock>
+    <h4>Else Block</h4>
+    <h4>Else Block</h4>
+    <h4>Else Block</h4>
+    <h4>Else Block</h4>
+</ng-template>
+
+<ng-template #tBlock>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis commodi nostrum exercitationem distinctio sit culpa, dolor accusamus ea. Expedita molestias sint repellendus explicabo ullam laboriosam incidunt odio corrupti autem quo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis commodi nostrum exercitationem distinctio sit culpa, dolor accusamus ea. Expedita molestias sint repellendus explicabo ullam laboriosam incidunt odio corrupti autem quo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis commodi nostrum exercitationem distinctio sit culpa, dolor accusamus ea. Expedita molestias sint repellendus explicabo ullam laboriosam incidunt odio corrupti autem quo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis commodi nostrum exercitationem distinctio sit culpa, dolor accusamus ea. Expedita molestias sint repellendus explicabo ullam laboriosam incidunt odio corrupti autem quo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis commodi nostrum exercitationem distinctio sit culpa, dolor accusamus ea. Expedita molestias sint repellendus explicabo ullam laboriosam incidunt odio corrupti autem quo.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis commodi nostrum exercitationem distinctio sit culpa, dolor accusamus ea. Expedita molestias sint repellendus explicabo ullam laboriosam incidunt odio corrupti autem quo.
+</ng-template>
+

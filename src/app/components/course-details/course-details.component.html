@@ -1,0 +1,7 @@
+<h1>Course Details</h1>
+<h2 *ngFor="let x of course" (click)="onSelect(x)" [class.selected]="isSelected(x)">
+    {{x.id}}---{{x.name}} ---- {{x.fee}}
+
+</h2>
+
+<h5>Error: {{errMsg}}</h5>

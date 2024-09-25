@@ -1,0 +1,7 @@
+<div *ngFor="let user of usersdata" class="user-card">
+    <img [src]="user.avatar" alt="{{user.first_name}}" />
+    <p>{{user.id}}</p>
+    <p>{{user.email}}</p>
+    <p>{{user.first_name}}   {{user.last_name}}</p>
+
+</div>

@@ -1,0 +1,6 @@
+<h1>parent component</h1>
+
+<h3>Child Data: {{dataFromChild}}</h3><hr>
+
+
+<app-child (cData)="dataFromChild = $event" [pPostman]="pData"></app-child>

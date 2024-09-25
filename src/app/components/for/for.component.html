@@ -1,0 +1,10 @@
+<h1><u>for Directive</u></h1>
+
+<h2 *ngFor="let x of names; index as i">
+    Value : {{x}}  ------ Index : {{i}}
+</h2>
+
+
+<h2 *ngFor="let x of emp | keyvalue">
+    {{x.key}} --- {{x.value}}
+</h2>
