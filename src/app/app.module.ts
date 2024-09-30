@@ -24,6 +24,14 @@ import { CourseService } from './services/course.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SelectedItemComponent } from './components/selected-item/selected-item.component';
 import { ShowApiDataComponent } from './components/show-api-data/show-api-data.component';
+import { ConsumeAPIComponent } from './components/consume-api/consume-api.component';
+import { ChangeDetectionParentComponent } from './components/change-detection-parent/change-detection-parent.component';
+import { ChangeDetectionChildComponent } from './components/change-detection-child/change-detection-child.component';
+import { CounterPatentComponent } from './NgRx/counter-patent/counter-patent.component';
+import { CounterActionsComponent } from './NgRx/counter-actions/counter-actions.component';
+import { CounterDisplayComponent } from './NgRx/counter-display/counter-display.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './Store/counterReducer';
 
 @NgModule({
   declarations: [
@@ -44,6 +52,12 @@ import { ShowApiDataComponent } from './components/show-api-data/show-api-data.c
     CourseDetailsComponent,
     SelectedItemComponent,
     ShowApiDataComponent,
+    ConsumeAPIComponent,
+    ChangeDetectionParentComponent,
+    ChangeDetectionChildComponent,
+    CounterPatentComponent,
+    CounterActionsComponent,
+    CounterDisplayComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +65,8 @@ import { ShowApiDataComponent } from './components/show-api-data/show-api-data.c
     BrowserAnimationsModule,
     AngularMaterialModule,
     FormsModule,
-    HttpClientModule 
+    HttpClientModule,
+    StoreModule.forRoot({Counter: counterReducer}) 
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
