@@ -1,0 +1,23 @@
+<label for="name">Name: </label>
+<input id="name" type="text" [formControl]="name">
+
+<p>Value: {{name.value}}</p>
+
+<!-- <button class="btn btn-danger" (click)="updataName()">Update Name</button> -->
+<button class="btn btn-danger" (click)="updataName()">Update Name</button> <br>
+
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label for="first-name">Firsr Name: </label>
+    <input id="first-name" type="text" formControlName="firstName">
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName">
+
+    <button mat-raised-button color="warn" type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+
+<div class="myReactiveForm">
+    {{profileForm.value | json}}
+    {{profileForm.status}}
+</div>

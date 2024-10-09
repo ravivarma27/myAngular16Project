@@ -38,11 +38,26 @@
 
 <!-- <app-change-detection-parent></app-change-detection-parent> -->
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <h1>Counter Application without NgRx</h1>
     <div class="row">
         <div class="col-md-12 text-center">
             <app-counter-patent></app-counter-patent>
         </div>
     </div>
+</div> -->
+
+<!-- <app-tdf></app-tdf> -->
+
+<!-- <app-reactive-form></app-reactive-form> -->
+
+<!-- <app-sample-reactive></app-sample-reactive> -->
+
+<!-- <app-renderdata></app-renderdata> -->
+
+<div>
+    <app-lchchild *ngIf="isVisible" [myNumber]="counter"></app-lchchild>
+    <button type="button" class="btn btn-primary" (click)="increment()">+1</button>
+    <button type="button" class="btn btn-danger" (click)="decrement()">-1</button>
+    <button type="button" class="btn btn-warning" (click)="switchVisibility()">Destroy</button>
 </div>

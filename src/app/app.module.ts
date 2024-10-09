@@ -12,7 +12,7 @@ import { EBindingComponent } from './components/e-binding/e-binding.component';
 import { SBindingComponent } from './components/s-binding/s-binding.component';
 import { ToWayDataBindingComponent } from './components/to-way-data-binding/to-way-data-binding.component';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IfComponent } from './components/if/if.component';
 import { ForComponent } from './components/for/for.component';
 import { ParentComponent } from './components/parent/parent.component';
@@ -32,6 +32,11 @@ import { CounterActionsComponent } from './NgRx/counter-actions/counter-actions.
 import { CounterDisplayComponent } from './NgRx/counter-display/counter-display.component';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './Store/counterReducer';
+import { TdfComponent } from './forms/tdf/tdf.component';
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
+import { RenderdataComponent } from './forms/renderdata/renderdata.component';
+import { SampleReactiveComponent } from './forms/sample-reactive/sample-reactive.component';
+import { LCHchildComponent } from './lifeCycleHooks/lchchild/lchchild.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +63,11 @@ import { counterReducer } from './Store/counterReducer';
     CounterPatentComponent,
     CounterActionsComponent,
     CounterDisplayComponent,
+    TdfComponent,
+    ReactiveFormComponent,
+    RenderdataComponent,
+    SampleReactiveComponent,
+    LCHchildComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +76,7 @@ import { counterReducer } from './Store/counterReducer';
     AngularMaterialModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     StoreModule.forRoot({Counter: counterReducer}) 
   ],
   providers: [CourseService],

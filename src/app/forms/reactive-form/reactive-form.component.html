@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <h2>Login Register Form</h2>
+    <!-- <form [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm)"> -->
+    <form [formGroup]="registrationForm">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <input type="text"
+                        [class.is-invalid]="registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched"
+                        formControlName="userName" class="form-control">
+                    <label>User Name:</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" formControlName="password" class="form-control">
+                    <label>Password:</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" formControlName="confirmPassword" class="form-control">
+                    <label>confirm Password:</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <div formGroupName="address">
+                    <div class="form-group">
+                        <input type="text" formControlName="state" class="form-control">
+                        <label>State:</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="city" class="form-control">
+                        <label>City:</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="pincode" class="form-control">
+                        <label>PIN:</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <input type="submit" name="submit" value="Register">
+        <input type="button" (click)="displayValues()" name="Display" value="Display">
+    </form>
+
+    <div class="myValue">
+        {{registrationForm.value | json}}
+    </div>
+
+</div>

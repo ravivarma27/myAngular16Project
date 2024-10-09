@@ -1,0 +1,25 @@
+<form [formGroup]="userForm">
+    <div formArrayName="data">
+        <!-- <div *ngFor="let user of usersForm.get('data').controls; let i=index" [formGroupName]="i"> -->
+            <!-- <h3>User {{i + 1}}</h3> -->
+        </div>
+        <label>ID:</label>
+        <input formControlName="id" type="number">
+    <!-- </div> -->
+    <div>
+        <label>Email</label>
+        <input formControlName="email" type="email">
+    </div>
+    <div>
+        <label>First Name</label>
+        <input formControlName="first_name" type="text">
+    </div>
+    <div>
+        <label>Last Name</label>
+        <input formControlName="last_name" type="text">
+    </div>
+    <div>
+        <label>Avatar:</label>
+        <img [src]="users.get('avatar')" alt="User Avatar" width="100">
+    </div>
+</form>
